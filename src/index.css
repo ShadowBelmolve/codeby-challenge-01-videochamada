@@ -1,3 +1,172 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color--primary-p1: #C8B50E;
+  --color--primary-n: #F0DD33;
+  --color--primary-m1: #F5E97A;
+  --color--text-p1: #C7C7C7;
+  --color--text-n: #D9D9D9;
+  --color--text-m1: #FFFFFF;
+  --color--danger-n: #C72323;
+  --color--danger-p1: #871717;
+  --color--success-n: #3B8D2E;
+  --color--success-p1: #23551B;
+  --color--background-m1: #424242;
+  --color--background-n: #1C1C1C;
+  --color--background-p1: #111111;
+}
+
+body {
+  background: var(--color--background-n);
+}
+
+.p {
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+
+.h6 {
+  font-family: Source Sans Pro;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+
+.h5 {
+  font-family: Source Sans Pro;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0em;
+}
+
+.h5.bold {
+  font-weight: 700;
+}
+
+.h4 {
+  font-family: Source Sans Pro;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: 0em;
+}
+
+.h3 {
+  font-family: Source Sans Pro;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 55px;
+  letter-spacing: 0em;
+}
+
+.h3.bold {
+  font-weight: 700;
+}
+
+.h2 {
+  font-family: Source Sans Pro;
+  font-size: 67px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 74px;
+  letter-spacing: 0em;
+}
+
+.main-container {
+  @apply w-full md:max-w-3xl mx-auto antialiased mt-28 text-center;
+}
+
+.button-primary {
+  background: var(--color--primary-n);
+  color: var(--color--text-m1);
+  @apply rounded-lg px-2 py-4 w-full md:w-60;
+}
+
+.button-avatar-selector {
+  background: var(--color--background-n);
+  color: var(--color--text-m1);
+  @apply rounded-lg px-2 py-2 w-full md:w-60 my-2;
+}
+
+.button-secondary {
+  color: var(--color--primary-n);
+  border: 1px solid var(--color--primary-n);
+  @apply rounded-lg px-2 py-4;
+}
+
+.input {
+  border: 4px solid var(--color--text-n);
+  color: var(--color--text-n);
+  background: var(--color--background-n);
+  @apply rounded-lg px-4 py-4 w-full my-12;
+}
+
+.main-headline {
+  color: var(--color--text-n);
+}
+
+.display-avatar-main {
+  @apply relative mx-auto flex justify-center items-center;
+}
+
+.display-avatar-image {
+  @apply h-5/6 w-5/6 mx-auto p-3 border-white bg-white flex justify-center items-center rounded-full;
+  border-width: 4px;
+}
+
+.display-avatar-image svg {
+  @apply w-full;
+}
+
+.display-avatar-edit {
+  @apply w-20 h-20 p-3 border-8 rounded-full absolute bottom-0 right-0 transform cursor-pointer;
+  background-color: var(--color--primary-n);
+  border-color: var(--color--background-n);
+  color: var(--color--text-m1);
+  --tw-translate-x: -10%;
+  --tw-translate-y: -10%;
+}
+
+.avatar-selector {
+  @apply rounded-lg;
+  background-color: var(--color--primary-n);
+}
+
+.avatar-selector-icons {
+  @apply mx-2 rounded-lg flex justify-center items-center flex-wrap h-96 overflow-auto;
+  background-color: var(--color--background-m1);
+}
+
+.avatar-selector-icon {
+  @apply h-32 w-1/4;
+}
+
+.avatar-selector-icon .display-avatar-main {
+  @apply cursor-pointer;
+}
+
+.avatar-selector-icon.selected .display-avatar-image {
+  border-color: var(--color--primary-n);
+}
+
+.loading-screen {
+  @apply absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center;
+  background-color: rgba(28, 28, 28, 0.95);
+}
+
+.loading-spinner {
+  @apply w-64 h-64 rounded-full;
+  border: 40px solid var(--color--primary-n);
+}
