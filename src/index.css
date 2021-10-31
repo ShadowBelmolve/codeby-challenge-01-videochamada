@@ -149,6 +149,28 @@ body {
   background-color: var(--color--background-m1);
 }
 
+/* width */
+.avatar-selector-icons::-webkit-scrollbar {
+  @apply w-2;
+}
+
+/* Track */
+.avatar-selector-icons::-webkit-scrollbar-track {
+  @apply rounded-lg;
+  background: var(--color--background-m1);
+}
+
+/* Handle */
+.avatar-selector-icons::-webkit-scrollbar-thumb {
+  @apply rounded-lg;
+  background: var(--color--primary-n);
+}
+
+/* Handle on hover */
+.avatar-selector-icons::-webkit-scrollbar-thumb:hover {
+  background: var(--color--primary-p1);
+}
+
 .avatar-selector-icon {
   @apply h-32 w-1/4;
 }
