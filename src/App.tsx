@@ -36,7 +36,13 @@ function App() {
         <AvatarDisplay selectedAvatar={selectedAvatar} onEdit={() => setShowAvatarSelector(true)} />
       </div>
       <p className="p">
-        <input type="text" className="input h5" value={name} onChange={(e) => setName(e.target.value)} />
+        <input
+          type="text"
+          className="input h5"
+          value={name}
+          placeholder="Insira seu nome"
+          onChange={(e) => setName(e.target.value)}
+        />
       </p>
       <p className="p">
         <button type="submit" className="button-primary h5 bold">
